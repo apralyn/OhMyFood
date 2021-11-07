@@ -1,0 +1,67 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Shrikhand', cursive;
+}
+body{
+    padding: 0;
+    margin: 0 auto;
+    height: 100vh;
+    
+}
+.site-wrapper {
+    /* border: 5px solid red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* header, address, and footer is good on m/t/d */
+
+header {
+    width: 100%;
+    height: auto;
+    margin: 25px auto;
+}
+header img {
+    min-width: 100px;
+    max-width: 250px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+address {
+    width: 100%;
+    height: auto;
+    font-family: 'Roboto';
+    display: flex;
+    justify-content: center;
+    background-color: #eee;
+    padding: 25px; 
+    box-shadow: inset 1px 15px 17px -20px rgba(0,0,0,0.50);
+}
+
+footer {
+    width: 100%;
+    height: auto;
+    background-color: rgb(57, 57, 57);
+    font-family: 'Shrikhand';
+    color: white;
+    /* padding: 20px; */
+    display: flex;
+    flex-direction: column;
+}
+footer h3 {
+    font-size: 25px;
+}
+
+.ft-links ul li{
+    list-style: none;
+    align-items: flex-start;
+}
+
+/* Tablet 768px */
+/* Desktop 992px */
+/* max 1200px */
