@@ -1,14 +1,14 @@
 * {
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
-    font-family: 'Shrikhand', cursive;
 }
 body{
-    padding: 0;
     margin: 0 auto;
-    height: 100vh;
-    
 }
+html {
+    line-height: 1.15; /* 1 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+}
+
 .site-wrapper {
     /* border: 5px solid red; */
     display: flex;
@@ -28,14 +28,16 @@ header img {
     min-width: 100px;
     max-width: 250px;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
 }
-
+main {
+    width: 100%;
+    display: flex;
+}
 address {
+    font-family: 'Roboto', sans-serif;
     width: 100%;
     height: auto;
-    font-family: 'Roboto';
     display: flex;
     justify-content: center;
     background-color: #eee;
@@ -46,20 +48,26 @@ address {
 footer {
     width: 100%;
     height: auto;
+    padding: 15px 0 15px 25px;
     background-color: rgb(57, 57, 57);
-    font-family: 'Shrikhand';
     color: white;
-    /* padding: 20px; */
     display: flex;
     flex-direction: column;
 }
 footer h3 {
-    font-size: 25px;
+    margin: 10px 0;
+    font-size: 20px;
+    font-family: 'Shrikhand', cursive;
+}
+.ft-links ul {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 .ft-links ul li{
     list-style: none;
-    align-items: flex-start;
+
 }
 
 /* Tablet 768px */

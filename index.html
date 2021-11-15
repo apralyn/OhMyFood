@@ -7,17 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS -->
     <link rel="stylesheet" href="styles/main.css"/> 
-    <!-- from google font for Roboto -->
+    <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
-    <!--Shrikhand-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap" rel="stylesheet">
     <!-- Font Awesome CDN-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-    
+    <script src="https://kit.fontawesome.com/fb9ac8fdeb.js" crossorigin="anonymous"></script>
+    <!-- normalize.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <title>ohmyfood</title>
 </head>
 <body>
@@ -25,35 +23,34 @@
         <header>
             <img src="images/ohmyfood.png" alt="oh my food">
         </header>
-        <address>
-            <div><i class="fas fa-map-marker-alt"></i></div>
-            <span>Paris, Belleville</span>            
-        </address>
         <main>
-        <section>
-            <div>Book</div>
-            <div>Discover</div>
-            <div>Button</div>
-        </section>
-        <nav>
-            how it works
-        </nav>
-        <section>
-            Restaurants
-        </section>
-        </main>
+            <address>
+                <div><i class="fas fa-map-marker-alt"></i></div>
+                <span>Paris, Belleville</span>            
+            </address>
+            <section class="top-explore">
+                <h2></h2>
+                <span></span>
+                <div class="explore-btn">
+                    <button>Explore</button>
+                </div>
+            </section>
+            <section class="How-btns">
+            </section>
+            <section class="resto-cards">
+            </section>
+        </main>        
         <footer>
             <h3>ohmyfood</h3>
             <nav class="ft-links">
                 <ul>
-                    <li>Suggest a restaurant</li>
-                    <li>Become a partner</li>
+                    <li><i class="fas fa-utensils"></i>Suggest a restaurant</li>
+                    <li><i class="fas fa-hands-helping"></i>Become a partner</li>
                     <li>Legal</li>
                     <li>Contact</li>
                 </ul>
             </nav>
         </footer>
-    </div>
-    
+    </div>   
 </body>
 </html>
