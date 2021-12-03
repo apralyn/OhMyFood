@@ -138,6 +138,10 @@ address i, footer i {
 /* Restaurant Section */
 .restaurants-wrapper {
     background-color: rgb(255, 248, 248);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     
 }
 .res-card-wrap {
@@ -197,9 +201,6 @@ address i, footer i {
 }
 
 
-@media screen and (max-width: 778px) {
-
-}
 
 
 footer {
@@ -231,3 +232,4 @@ footer h3 {
 /* Tablet 768px */
 /* Desktop 992px */
 /* max 1200px */
+@media
