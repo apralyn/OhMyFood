@@ -146,9 +146,8 @@ address i, footer i {
 .how-it-button span {
     font-size: 22px;
 }
-.how-it-button:hover {
-    background-color: rgba(217, 167, 255, 0.224);
-    
+.how-it-button:hover{
+    background-color: rgba(217, 167, 255, 0.224);;   
 }
 .how-it-button i:hover {
     color: rgb(123, 52, 177);
@@ -167,6 +166,9 @@ address i, footer i {
 .restaurants-wrapper h2 {
     margin: auto;
     padding: 35px 25px 15px 25px;
+}
+.restaurants-wrapper a{
+    color: black;
 }
 
 .res-card-wrap {
@@ -206,11 +208,39 @@ address i, footer i {
     color: rgb(7, 39, 30);
     border-radius: 3px;
 }
-.white-backg i {
+/* .white-backg i {
     position: absolute;
     right: 30px;
     bottom: 40px;
     font-size: 30px;
+} */
+.heart-wrap {
+    position: relative;
+    left: 450px;
+    top: -50px;
+    font-size: 40px;
+
+}
+.heart-wrap .far {
+    position: absolute;
+    color: black;
+}
+.heart-wrap .fas {
+     /* gradient heart */
+    background: -webkit-gradient(linear, left top, left bottom, from(purple), to(pink));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* hover effect */
+    opacity: 0;
+    transition-property: opacity, z-index;
+    transition-duration: 450ms;
+}
+
+.heart-wrap .fas:hover{
+    opacity: 1;
+}
+.heart-wrap .far:hover {
+    opacity: 0;
 }
 .res-info-wrapper {
     display: flex;
