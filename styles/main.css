@@ -1,22 +1,21 @@
 * {
     box-sizing: border-box;
-    text-decoration: none !important;
+    text-decoration: none;
 }
 body{
     margin: 0 auto;
     font-family: 'Roboto', sans-serif;
 }
 html {
-    line-height: 1.15; /* 1 */
-    /* -webkit-text-size-adjust: 100%; 2 */
+    line-height: 1.15;
 }
 
 .site-wrapper {
-    /* border: 5px solid red; */
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
+    border: 2px solid yellowgreen;
 }
 
 /* header, address, and footer is good on m/t/d */
@@ -39,7 +38,7 @@ main {
 address {
     font-family: 'Roboto', sans-serif;
     font-style: normal;
-    font-size: 20px;
+    font-size: 22px;
     width: 100%;
     height: auto;
     display: flex;
@@ -63,20 +62,30 @@ address i, footer i {
     justify-content: center;
     align-items: center;
     gap: 10px;
-    background-color: rgb(255, 248, 248);
+    padding: 40px 0;
+    background-color: rgb(250, 250, 250);
+}
+.explore-wrapper h2, .method-wrapper h2, .restaurants-wrapper h2 {
+    font-size: 35px;
 }
 .explore-wrapper p {
-    font-size: 18px;
+    font-size: 28px;
+    margin: auto;
+    padding: 30px;
+    text-align: center;
+    font-weight: 300;
+    
 }
 .explore-btn {
     background: rgb(156,0,236);
-    background: linear-gradient(0deg, rgba(156,0,236,1) 0%, rgba(255,0,239,1) 100%);
-    padding: 25px 55px;
+    background: linear-gradient(355deg, rgba(156,0,236,1) 0%, rgba(255,0,239,1) 100%);
+    padding: 25px 40px;
     border: none;
     margin: 20px;
     border-radius: 60px;
     font-size: 22px;
     font-weight: 400;
+    color: white;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
 }
 .explore-btn a {
@@ -85,8 +94,13 @@ address i, footer i {
 
 /* How it Works SECTION */
 
-.how-it-wraps h2 {
-    font-size: 24px;
+.method-wrapper {
+    margin: 50px auto;
+}
+
+.method-wrapper h2 {
+    margin: auto;
+    padding: 0 25px 50px 25px;
 }
 
     /* choose a restaurant button */
@@ -115,48 +129,60 @@ address i, footer i {
     left: 35px;
 }
 .how-it-button {
+    width: 500px;
     padding: 35px 99px;
     border: none;
     margin: 20px;
-    border-radius: 25px;
+    border-radius: 35px;
     font-size: 18px;
     font-weight: 600;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
 }
 .how-it-button i {
     position: relative;
-    left: -25px;
+    left: -100px;
     font-size: 25px;
 }
+.how-it-button span {
+    font-size: 22px;
+}
 .how-it-button:hover {
-    background-color: rgba(164, 57, 245, 0.224);   
+    background-color: rgba(217, 167, 255, 0.224);
+    
 }
 .how-it-button i:hover {
-    color:rgba(164, 57, 245, 0.224);
+    color: rgb(123, 52, 177);
 }
 
 /* Restaurant Section */
 .restaurants-wrapper {
-    background-color: rgb(255, 248, 248);
-    display: flex;
+    background-color: rgb(250, 250, 250);
+    /* display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    
+    flex-direction: column; */
+    margin: auto;
+    padding: 50px 0;    
 }
+.restaurants-wrapper h2 {
+    margin: auto;
+    padding: 35px 25px 15px 25px;
+}
+
 .res-card-wrap {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 25px;
+    padding: 15px;
     margin: 0 auto;
 }
 .white-backg {
     position: relative;
     border: none;
     background-color: white;
-    width: 100%;
+    width: 525px;
+    /* width: 100%; */
     height: 380px;
     border-radius: 20px;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
@@ -200,9 +226,6 @@ address i, footer i {
     font-size: 22px;
 }
 
-
-
-
 footer {
     width: 100%;
     height: auto;
@@ -229,7 +252,16 @@ footer h3 {
 
 }
 
+/* for media query reference */
+/* @media only screen and (min-width: 320px) and (max-width: 480px); {} */
+/* @media only screen and (min-width: 481px) and (max-width: 768px); {} */
+/* @media only screen and (min-width: 769px) and (max-width: 992px); {} */
+/* anything beyond 992px is fixed layout - margin is set to auto and it just centers everything. *?
 /* Tablet 768px */
 /* Desktop 992px */
 /* max 1200px */
-@media
+@media only screen and (min-width: 992px) {
+    body {
+        background-color: coral;
+    }
+}

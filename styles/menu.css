@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body{
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+}
+html {
+    line-height: 1.15;
+}
+
+.site-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    border: 1px solid black;
+
+}
+header {
+    width: 100%;
+    height: auto;
+    margin: 10px auto;
+    padding-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ header button {
+    position: relative;
+    left: 25px;
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+}
+header a {
+    color: black;
+}
+
+header img {
+    min-width: 100px;
+    max-width: 250px;
+    margin: 0 auto;
+}
+/* main section */
+
+.hero-image img{
+   width: 485px;
+   position: relative;
+}
+.full-menu-wrapper {
+    position: relative;
+    top: -70px;
+    background-color: rgb(250, 250, 250);
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+.menu-header {
+    display: flex;
+    margin: 0 15px;
+    padding: 20px 0 0 10px;
+    font-family: 'Shrikhand', cursive;
+}
+.menu-entrees {
+    margin: auto 25px;
+}
+.green-line {
+    width: 40px;
+    height: 2px;
+    background-color: aqua;
+}
+.ticker-check {
+    position: absolute;
+}
+.entree-card {
+    z-index: 2;
+    width: 450px;
+    margin: 10px 0;
+    padding: 15px 10px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+}
+.ticker-box {
+    z-index: 1;
+    width: 100%;
+    text-align: right;
+    color: white;
+    font-size: 35px;
+    width: 450px;
+    margin: 10px 0;
+    padding: 15px 10px;
+    border-radius: 10px;
+    background-color: aqua;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+}
+
+.entree-card span {   
+    display: block;
+    line-height: 1.25;
+}
+.entree-card:hover{
+    width: 395px;
+}
+
+footer i {
+    position: relative;
+    left: -20px;
+}
+
+footer {
+    width: 100%;
+    height: auto;
+    padding: 15px 0 15px 25px;
+    background-color: rgb(57, 57, 57);
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+footer h3 {
+    margin: 10px 0;
+    font-size: 20px;
+    font-family: 'Shrikhand', cursive;
+}
+
+.ft-links ul {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.ft-links ul li{
+    list-style: none;
+
+}
