@@ -76,16 +76,19 @@ address i, footer i {
     font-weight: 300;
     
 }
-.explore-btn {
-    background: rgb(156,0,236);
-    background: linear-gradient(355deg, rgba(156,0,236,1) 0%, rgba(255,0,239,1) 100%);
-    padding: 25px 40px;
+.explore-btn { 
     border: none;
-    margin: 20px;
     border-radius: 60px;
+    
+    padding: 25px 40px;
+    margin: 20px;
+    
     font-size: 22px;
     font-weight: 400;
+    
     color: white;
+    background: rgb(156,0,236);
+    background: linear-gradient(355deg, rgba(156,0,236,1) 0%, rgba(255,0,239,1) 100%);
     box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
 }
 .explore-btn a {
@@ -96,6 +99,7 @@ address i, footer i {
 
 .method-wrapper {
     margin: 50px auto;
+    border: 3px solid blue;
 }
 
 .method-wrapper h2 {
@@ -109,6 +113,7 @@ address i, footer i {
     justify-content: center;
     align-items: center;
 }
+
 .purple-badge{
     /* Center the content */
     align-items: center;
@@ -120,31 +125,41 @@ address i, footer i {
     color: #fff;
 
     /* Rounded border */
-    border-radius: 9999px;
-    height: 32px;
-    width: 32px;
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    padding: 15px;
 
     /* position */
     position: relative;
     left: 35px;
 }
 .how-it-button {
-    width: 500px;
+    min-width: 350px;
+    max-width: 400px;
+    height: 110px;
+
     padding: 35px 99px;
-    border: none;
     margin: 20px;
+
+    border: none;
     border-radius: 35px;
-    font-size: 18px;
+
+    font-size: 16px;
     font-weight: 600;
+
     box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
 }
 .how-it-button i {
     position: relative;
-    left: -100px;
+    left: -60px;
+    /* bottom: -20px; */
     font-size: 25px;
 }
 .how-it-button span {
-    font-size: 22px;
+    font-size: 20px;
+    /* prevent paragraph from wrapping */
+    /* white-space: nowrap;  */
 }
 .how-it-button:hover{
     background-color: rgba(217, 167, 255, 0.224);;   
@@ -152,6 +167,7 @@ address i, footer i {
 .how-it-button i:hover {
     color: rgb(123, 52, 177);
 }
+
 
 /* Restaurant Section */
 .restaurants-wrapper {
@@ -290,8 +306,47 @@ footer h3 {
 /* Tablet 768px */
 /* Desktop 992px */
 /* max 1200px */
-@media only screen and (min-width: 992px) {
+
+@media screen and (min-width: 992px) {
     body {
         background-color: coral;
+    }
+    /* how it works section only */
+    .method-wrapper {
+        border: 3px solid green;
+    }
+    .three-btn-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+    }
+    .method-wrapper h2{
+        padding-bottom: 10px;
+    }
+    .how-it-button {
+        min-width: 250px;
+        max-width: 300px;
+        padding: 35px 50px;
+    }
+    .how-it-button i {
+        left: -30px;
+        font-size: 20px;
+    }
+    .how-it-button span {
+        font-size: 18px;
+    }
+    /* how it works section END */
+
+    /* restaurant section only */
+    .four-cards-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin: 50px;
+    }
+    .white-backg {
+        width: 370px;
     }
 }
