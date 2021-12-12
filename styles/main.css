@@ -249,13 +249,13 @@ address i, footer i {
     /* hover effect */
     opacity: 0;
     transition-property: opacity, z-index;
-    transition-duration: 450ms;
+    transition-duration: 850ms;
 }
 
-.heart-wrap .fas:hover{
+.heart-wrap:hover .fas{
     opacity: 1;
 }
-.heart-wrap .far:hover {
+.heart-wrap:hover .far{
     opacity: 0;
 }
 .res-info-wrapper {
@@ -308,9 +308,7 @@ footer h3 {
 /* max 1200px */
 
 @media screen and (min-width: 992px) {
-    body {
-        background-color: coral;
-    }
+    
     /* how it works section only */
     .method-wrapper {
         border: 3px solid green;
@@ -348,5 +346,9 @@ footer h3 {
     }
     .white-backg {
         width: 370px;
+    }
+    .heart-wrap {
+        top: 0;
+        left: 0;
     }
 }
