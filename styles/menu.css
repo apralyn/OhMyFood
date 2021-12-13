@@ -67,19 +67,52 @@ header img {
 .menu-header i {
     font-size: x-large;
 }
-.menu-entrees {
+.menu-entrees, .menu-main-dish, .menu-desserts {
     margin: auto 25px;
+}
+.heart-wrap {
+    position: relative;
+    left: 0px;
+    top: 0px;
+    font-size: 40px;
+
+}
+.heart-wrap .far {
+    position: absolute;
+    color: black;
+}
+.heart-wrap .fas {
+     /* gradient heart */
+    background: -webkit-gradient(linear, left top, left bottom, from(purple), to(pink));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* hover effect */
+    opacity: 0;
+    transition-property: opacity, z-index;
+    transition-duration: 850ms;
+}
+
+.heart-wrap:hover .fas{
+    opacity: 1;
+}
+.heart-wrap:hover .far{
+    opacity: 0;
+}
+.menu-price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.price {
+    padding-right: 10px;
 }
 .green-line {
     width: 40px;
     height: 2px;
     background-color: aqua;
 }
-.dish-wrapper {
-    display: flex;
-    flex-direction: column;
-}
-.dishes {
+
+.menu-item {
     display: flex;
     flex-direction: column;
 
@@ -87,7 +120,11 @@ header img {
     margin: 5px;
 }
 
-
+/* ticker animation start */
+.dish-wrapper {
+    display: flex;
+    flex-direction: column;
+}
 .ticker-check {
     position: absolute;
 }
@@ -101,7 +138,7 @@ header img {
     box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
     transition-duration: 450ms;
 }
-.ticker-box {
+.ticker-card {
     z-index: 1;
     width: 100%;
     text-align: right;
@@ -129,7 +166,7 @@ header img {
 .entree-card:hover{
     width: 395px;
 }
-
+/* end of ticker animation */
 footer i {
     position: relative;
     left: -20px;
@@ -148,6 +185,9 @@ footer h3 {
     margin: 10px 0;
     font-size: 20px;
     font-family: 'Shrikhand', cursive;
+}
+footer a {
+    color: white;
 }
 
 .ft-links ul {
