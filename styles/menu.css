@@ -58,9 +58,14 @@ header img {
 }
 .menu-header {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     margin: 0 15px;
-    padding: 20px 0 0 10px;
+    padding: 20px 10px 0 10px;
     font-family: 'Shrikhand', cursive;
+}
+.menu-header i {
+    font-size: x-large;
 }
 .menu-entrees {
     margin: auto 25px;
