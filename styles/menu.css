@@ -70,6 +70,19 @@ header img {
     height: 2px;
     background-color: aqua;
 }
+.dish-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+.dishes {
+    display: flex;
+    flex-direction: column;
+
+    border: 1px solid black;
+    margin: 5px;
+}
+
+
 .ticker-check {
     position: absolute;
 }
@@ -98,9 +111,10 @@ header img {
 }
 .ticker-cards i {
     transition: transform 1s;
+    transform: rotate(180deg);
 }
 .ticker-cards:hover i {
-    transform: rotate(180deg);
+    transform: rotate(0deg);
 }
 
 .entree-card span {   
