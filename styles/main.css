@@ -15,7 +15,6 @@ html {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    border: 2px solid yellowgreen;
 }
 
 /* header, address, and footer is good on m/t/d */
@@ -90,16 +89,20 @@ address i, footer i {
     background: rgb(156,0,236);
     background: linear-gradient(355deg, rgba(156,0,236,1) 0%, rgba(255,0,239,1) 100%);
     box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+
+    transition-duration: 500ms ease;
 }
 .explore-btn a {
     color: white;
+}
+.explore-wrapper:hover .explore-btn {
+    opacity: 0.6;
 }
 
 /* How it Works SECTION */
 
 .method-wrapper {
     margin: 50px auto;
-    border: 3px solid blue;
 }
 
 .method-wrapper h2 {
@@ -281,6 +284,9 @@ footer {
     display: flex;
     flex-direction: column;
 }
+footer a {
+    color: white;
+}
 footer h3 {
     margin: 10px 0;
     font-size: 20px;
@@ -310,9 +316,6 @@ footer h3 {
 @media screen and (min-width: 992px) {
     
     /* how it works section only */
-    .method-wrapper {
-        border: 3px solid green;
-    }
     .three-btn-container {
         display: flex;
         justify-content: center;
@@ -348,7 +351,6 @@ footer h3 {
         width: 370px;
     }
     .heart-wrap {
-        top: 0;
-        left: 0;
+        left: 300px;
     }
 }
