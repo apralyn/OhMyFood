@@ -55,6 +55,7 @@ header img {
     background-color: rgb(250, 250, 250);
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
+    padding-bottom: 25px;
 }
 .menu-header {
     display: flex;
@@ -64,17 +65,15 @@ header img {
     padding: 20px 10px 0 10px;
     font-family: 'Shrikhand', cursive;
 }
-.menu-header i {
-    font-size: x-large;
-}
+
 .menu-entrees, .menu-main-dish, .menu-desserts {
     margin: auto 25px;
 }
 .heart-wrap {
     position: relative;
-    left: 0px;
-    top: 0px;
-    font-size: 40px;
+    left: -50px;
+    top: -15px;
+    font-size: 30px;
 
 }
 .heart-wrap .far {
@@ -82,6 +81,7 @@ header img {
     color: black;
 }
 .heart-wrap .fas {
+    position: absolute;
      /* gradient heart */
     background: -webkit-gradient(linear, left top, left bottom, from(purple), to(pink));
     -webkit-background-clip: text;
@@ -110,63 +110,71 @@ header img {
     width: 40px;
     height: 2px;
     background-color: aqua;
+    margin-bottom: 15px;
 }
-
+.menu-items-container {
+    margin-top: 40px;
+}
 .menu-item {
     display: flex;
     flex-direction: column;
 
-    border: 1px solid black;
-    margin: 5px;
+    margin: 15px;
+
+    position: relative;
+
+    z-index: 99;
 }
 
-/* ticker animation start */
-.dish-wrapper {
-    display: flex;
-    flex-direction: column;
+.menu-items-container .item-one, .menu-items-container .item-two, .menu-items-container .item-three {
+    transform: translateY(-25px);
+    transition-property: transform;
+    transition: 1s ease;
 }
-.ticker-check {
-    position: absolute;
-}
-.entree-card {
-    z-index: 2;
-    width: 450px;
-    margin: 10px 0;
-    padding: 15px 10px;
-    border-radius: 10px;
+
+.menu-dish {
     background-color: white;
-    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
-    transition-duration: 450ms;
-}
-.ticker-card {
-    z-index: 1;
     width: 100%;
-    text-align: right;
-    color: white;
-    font-size: 35px;
-    width: 450px;
-    margin: 10px 0;
-    padding: 15px 10px;
+    height: 100%;
     border-radius: 10px;
-    background-color: aqua;
-    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+    padding: 10px;
+    box-shadow: 5px 5px 69px 2px #dadada;
 }
-.ticker-cards i {
-    transition: transform 1s;
-    transform: rotate(180deg);
+.menu-price {
+    padding-top: 10px;
 }
-.ticker-cards:hover i {
-    transform: rotate(0deg);
+.menu-price span {
+    white-space: nowrap;
+    overflow: hidden;
+}
+.menu-ticker {
+    background-color: #99E2D0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 10px;
+}
+.fa-check-circle {
+    font-size: 30px;
+    color: white;
+    position: absolute;
+    left: 360px;
+    top: 17px;
 }
 
-.entree-card span {   
-    display: block;
-    line-height: 1.25;
+.menu-item:hover .menu-dish {
+    width: 85%;
+    
 }
-.entree-card:hover{
-    width: 395px;
+.menu-item:hover .menu-price {
+    text-overflow: ellipsis;
 }
-/* end of ticker animation */
+
+
+
 footer i {
     position: relative;
     left: -20px;
