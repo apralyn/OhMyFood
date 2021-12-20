@@ -11,11 +11,14 @@ body{
 html {
     line-height: 1.15;
 }
+.loading, .site-wrapper {
+    position: absolute;
+}
 .loading {
     width: 100%;
     height: 100vh;
     position: relative;
-    z-index: 1;
+    z-index: 2;
     opacity: 1;
     animation: hide 2s ease forwards;
     display: flex;
@@ -62,13 +65,14 @@ html {
     0% {opacity: 1;}
     100% {
         visibility: hidden;
+        /* z-index: -1; */
     } 
   }
   .site-wrapper {
     position: absolute;
     left: 0;
     top: 0;
-    z-index: -1;
+    z-index: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -146,8 +150,6 @@ address i, footer i {
     background: rgb(156,0,236);
     background: linear-gradient(355deg, rgba(156,0,236,1) 0%, rgba(255,0,239,1) 100%);
     box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
-
-    transition-duration: 500ms ease;
 }
 .explore-btn a {
     color: white;
@@ -303,7 +305,8 @@ address i, footer i {
 }
 .heart-wrap .fas {
      /* gradient heart */
-    background: -webkit-gradient(linear, left top, left bottom, from(purple), to(pink));
+     background-image: linear-gradient(purple,pink);
+    /* background: -webkit-gradient(linear, left top, left bottom, from(purple), to(pink)); */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     /* hover effect */
