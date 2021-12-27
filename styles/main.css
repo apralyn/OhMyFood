@@ -15,6 +15,7 @@ html {
     position: absolute;
 }
 .loading {
+    /* fixed the loading to full page */
     position: fixed;
     width: 100%;
     height: 100%;

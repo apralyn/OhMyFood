@@ -156,6 +156,7 @@ header img {
     left: 0;
     z-index: -1;
     border-radius: 10px;
+    
 }
 .fa-check-circle {
     font-size: 30px;
@@ -163,14 +164,17 @@ header img {
     position: absolute;
     left: 360px;
     top: 17px;
+    transform: rotate(180deg);
 }
 
 .menu-item:hover .menu-dish {
-    width: 85%;
-    
+    width: 85%;   
 }
 .menu-item:hover .menu-price {
     text-overflow: ellipsis;
+}
+.menu-ticker:hover .fa-check-circle{
+    transform: rotate(0deg);
 }
 
 
