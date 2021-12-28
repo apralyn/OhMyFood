@@ -114,16 +114,52 @@ header img {
 }
 .menu-items-container {
     margin-top: 40px;
+    /* fr codepen transfer */
+    /* width: 500px;
+        height: 400px;
+        margin: 50px; */
 }
 .menu-item {
     display: flex;
     flex-direction: column;
-
     margin: 15px;
-
-    position: relative;
-
     z-index: 99;
+    
+    position: relative;
+    /* fr codepen transfer */
+    /* animation first try */
+
+    animation: menuItems;
+    animation-duration: 850ms;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+
+.item-one, .item-two, .item-three {
+    opacity: 0;
+    animation-direction: normal;
+}
+.item-two {
+    animation-delay: 2s;
+}
+.item-three {
+    animation-delay: 3s;
+}
+
+@keyframes menuItems {
+    0% {
+        opacity: 0;
+        top: 0px;
+    }
+    25%, 50% {
+        opacity: 0.5;
+        top: -10px;
+    }
+    100% {
+        opacity: 1;
+        top: 10px;
+    }
 }
 
 .menu-items-container .item-one, .menu-items-container .item-two, .menu-items-container .item-three {
@@ -164,7 +200,8 @@ header img {
     position: absolute;
     left: 360px;
     top: 17px;
-    transform: rotate(180deg);
+    transform: rotate(-115deg);
+    transition: transform all 3s 1s;
 }
 
 .menu-item:hover .menu-dish {
