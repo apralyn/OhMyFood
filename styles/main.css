@@ -272,7 +272,9 @@ address i, footer i {   /* for space between icon and address */
     margin: 15px;
 }
 .res-card-wrap:hover {
-    box-shadow: 0 10px 25px 0 #adadad; 
+    box-shadow: 0 10px 25px 0 #adadad;
+    border-radius: 20px;
+
 }
 .white-backg {
     position: relative;
