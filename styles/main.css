@@ -301,9 +301,9 @@ address i, footer i {
     font-size: 30px;
 } */
 .heart-wrap {
-    position: relative;
-    left: 450px;
-    top: -50px;
+    position: absolute;
+    left: 445px;
+    top: 312px;
     font-size: 40px;
 
 }
