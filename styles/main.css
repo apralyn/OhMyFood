@@ -1,3 +1,11 @@
+/* for media query reference */
+/* @media (min-width: 320px) and (max-width: 480px) {} */
+/* @media (min-width: 481px) and (max-width: 768px) {} */
+/* @media (min-width: 769px) and (max-width: 992px) {} */
+/* anything beyond 992px is fixed layout - margin is set to auto and centers everything. */
+/* Tablet 768px */
+/* Desktop 992px */
+
 * {
     box-sizing: border-box;
     text-decoration: none;
@@ -11,6 +19,9 @@ body{
 html {
     line-height: 1.15;
 }
+
+/* Mobile View Start */
+/* breakpoint 0-320px/ 320-500px for Mobile */
 .loading, .site-wrapper {
     position: absolute;
 }
@@ -294,12 +305,7 @@ address i, footer i {
     color: rgb(7, 39, 30);
     border-radius: 3px;
 }
-/* .white-backg i {
-    position: absolute;
-    right: 30px;
-    bottom: 40px;
-    font-size: 30px;
-} */
+
 .heart-wrap {
     position: absolute;
     left: 445px;
@@ -371,17 +377,14 @@ footer h3 {
     list-style: none;
 
 }
+/* Tablet View Start */
+/* breakpoint 481px-768px on Tablet */
+@media (min-width: 481px) {
 
-/* for media query reference */
-/* @media only screen and (min-width: 320px) and (max-width: 480px); {} */
-/* @media only screen and (min-width: 481px) and (max-width: 768px); {} */
-/* @media only screen and (min-width: 769px) and (max-width: 992px); {} */
-/* anything beyond 992px is fixed layout - margin is set to auto and it just centers everything. *?
-/* Tablet 768px */
-/* Desktop 992px */
-/* max 1200px */
-
-@media screen and (min-width: 992px) {
+}
+/* Desktop View Start */
+/* breakpoint 769px-992px on Desktop */
+@media (min-width: 992px) {
     
     /* how it works section only */
     .three-btn-container {
