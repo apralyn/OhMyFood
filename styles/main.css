@@ -147,7 +147,7 @@ address i, footer i {   /* for space between icon and address */
     text-align: center;
 }
 .explore-wrapper h2, .method-wrapper h2, .restaurants-wrapper h2 {
-    font-size: 35px;
+    font-size: 30px;
 }
 .explore-wrapper p {
     font-size: 28px;
@@ -196,10 +196,7 @@ address i, footer i {   /* for space between icon and address */
     /* choose a restaurant button */
 .badge-btn-wrapper{    
     display: flex;
-    justify-content: center;
     align-items: center;
-
-    
 }
 .purple-badge{
     /* Center the content */
@@ -211,11 +208,13 @@ address i, footer i {   /* for space between icon and address */
     background-color: rgb(164, 57, 245);
     color: #fff;
 
+    font-size: .7em;
+
     /* Rounded border */
     border-radius: 50%;
     height: 25px;
     width: 25px;
-    padding: 15px;
+    padding: 10px;
 
     /* position */
     position: relative;
@@ -223,22 +222,22 @@ address i, footer i {   /* for space between icon and address */
 }
 .card-icons {
     position: relative;
-    left: 63px;
-    font-size: 1em;
+    left: 47px;
+    font-size: .9em;
 }
 .badge-btn-wrapper:hover .card-icons {
     color:rgb(164, 57, 245);
 }
 .how-it-button {
-    min-width: 315px;
-    max-width: 400px;
-    /* height: 110px; */
+    min-width: 255px;
+    max-width: 350px;
 
-    padding: 30px 0 30px 76px;
-    margin: 20px 0;
+    padding: 29px 0 30px 57px;
+    margin: 15px 0;
     
     text-align: start;
     font-weight: 500;
+    font-size: .9em;
 
     border: none;
     border-radius: 35px;
@@ -253,10 +252,7 @@ address i, footer i {   /* for space between icon and address */
 /* Restaurant Section */
 .restaurants-wrapper {
     background-color: rgb(250, 250, 250);
-    /* display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column; */
+
     margin: auto;
     padding: 50px 0;    
 }
@@ -273,44 +269,46 @@ address i, footer i {   /* for space between icon and address */
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 15px;
-    margin: 0 auto;
+    margin: 15px;
+}
+.res-card-wrap:hover {
+    box-shadow: 0 10px 25px 0 #adadad; 
 }
 .white-backg {
     position: relative;
     border: none;
     background-color: white;
-    width: 525px;
-    /* width: 100%; */
-    height: 380px;
+    
+    width: 290px;
+    height: 215px;
     border-radius: 20px;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
   }
   .white-backg img {
     width: 100%;
-    height: 280px;
+    height: 155px;
     border-radius: 20px 20px 0 0 ;
   }
   .sm-green-btn {
     position: absolute;
-    top: 20px;
-    right: 20px; 
+    top: 10px;
+    right: 10px; 
     border: none;
-    padding-top: 10px;
+    padding-top: 7px;
     background-color: aquamarine;
-    width: 100px;
-    height: 40px;
+    width: 60px;
+    height: 25px;
     text-align: center;
-    font-size: 18px;
+    font-size: .7em;
     color: rgb(7, 39, 30);
     border-radius: 3px;
 }
 
 .heart-wrap {
     position: absolute;
-    left: 445px;
-    top: 312px;
-    font-size: 40px;
+    left: 245px;
+    top: 175px;
+    font-size: 1.5em;
 
 }
 .heart-wrap .far {
@@ -340,13 +338,13 @@ address i, footer i {   /* for space between icon and address */
     flex-direction: column;
 }
 .title{
-    font-size: 24px;  
+    font-size: 1em;  
     font-weight: 600;
-    padding: 15px 0 5px 15px;
+    padding: 7px 0 1px 15px;
   }
 .city {
     padding-left: 15px;
-    font-size: 22px;
+    font-size: 1em;
 }
 
 footer {
@@ -366,25 +364,66 @@ footer h3 {
     font-size: 20px;
     font-family: 'Shrikhand', cursive;
 }
-
-.ft-links ul {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
+.footer-link-wrap {
+    display: flex;
+    margin: 10px;
+}
+.footer-links, .footer-icons {
+    display: flex;
+    flex-direction: column;
 }
 
-.ft-links ul li{
-    list-style: none;
-
-}
 /* Tablet View Start */
 /* breakpoint 481px-768px on Tablet */
 @media (min-width: 481px) {
-    body {
-        background-color: lightseagreen;
-    }
+
     .explore-btn {
         font-size: 1.25em;
+    }
+    .explore-wrapper h2, .method-wrapper h2, .restaurants-wrapper h2 {
+        font-size: 35px;
+    }
+    .purple-badge {
+        padding: 15px;
+        font-size: 1em;
+        left: 45px;
+    }
+    .card-icons {
+        left: 85px;
+        font-size: 1em;
+    }
+    .how-it-button {
+        min-width: 350px;
+        padding: 35px 0 35px 85px;
+        margin: 20px;
+        font-size: 16px;
+    }
+    .white-backg {
+        width: 455px;
+        height: 380px;
+    }
+    .white-backg img {
+        height: 280px;
+    }
+    .heart-wrap {
+        left: 400px;
+        top: 315px;
+        font-size: 40px;
+    }
+    .title{
+        font-size: 24px;  
+        padding: 15px 0 5px 15px;
+      }
+    .city {
+        font-size: 22px;
+    }
+    .sm-green-btn {
+        top: 20px;
+        right: 20px;
+        padding-top: 10px;
+        width: 100px;
+        height: 40px;
+        font-size: 18px;
     }
 
 }
@@ -401,6 +440,9 @@ footer h3 {
     }
     .method-wrapper h2{
         padding-bottom: 10px;
+    }
+    .purple-badge {
+        left: 50px;
     }
     /* .how-it-button {
         min-width: 250px;
@@ -423,11 +465,5 @@ footer h3 {
         justify-content: center;
         align-items: center;
         margin: 50px;
-    }
-    .white-backg {
-        width: 370px;
-    }
-    .heart-wrap {
-        left: 300px;
     }
 }
