@@ -22,6 +22,8 @@ html {
 
 /* Mobile View Start */
 /* breakpoint 0-320px/ 320-500px for Mobile */
+
+/* Page Loader Section */
 .loading, .site-wrapper {
     position: absolute;
 }
@@ -29,20 +31,26 @@ html {
     /* fixed the loading to full page */
     width: 100%;
     height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    /* bottom: 0;
-    right: 0; */
-    /* position: relative; */
-    z-index: 2;
-    opacity: 1;
-    animation: hide 2s ease forwards;
+    margin: auto;
+
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: auto;
+
     background-color: white;
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    /* animation: hide 2s ease forwards; */
+    animation-name: hide;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+
+    z-index: 2;
+    opacity: 1;
   }
   .circle {
     /*  circle only  */
@@ -53,50 +61,42 @@ html {
   .spinner {
       width: 50%;
       height: 50%;
+      
       border-radius: 50%;
       border: 5px solid transparent;
       border-top-color: #c27bcb;
       border-bottom-color: #FF79DA;
-      animation: spin linear 850ms infinite;
+      
+      /* animation: spin linear 850ms infinite; */
+      animation-name: spin;
+      animation-duration: 850ms;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
   }
-  /* .main-page {
-    width: 100%;
-    height: 100vh;
-    background-color: #fff;
-    position: absolute;
-    top: 0;
-    left: 0;
-  } */
+
   @keyframes spin {
-      0% {
-          transform: rotate(0deg);
-      }
-      /* 75% {
-          opacity: 0.5;
-      } */
-      100% {
-          transform: rotate(360deg);
-      }
+      0% {transform: rotate(0deg);}
+      100% {transform: rotate(360deg);}
   }
 @keyframes hide {
     0% {opacity: 1;}
-    100% {
-        visibility: hidden;
-        /* z-index: -1; */
-    } 
+    100% {visibility: hidden;} 
   }
   .site-wrapper {
+    width: 100%;
+
     position: absolute;
     left: 0;
     top: 0;
     z-index: 1;
+    
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 100%;
+    align-items: center;  
 }
-/* header, address, and footer is good on m/t/d */
+/* End of Page Loader */
 
+/* Header/Location/Footer OK on M/T/D */
 header {
     width: 100%;
     height: auto;
@@ -116,16 +116,19 @@ address {
     font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-size: 22px;
+    
     width: 100%;
     height: auto;
+    padding: 25px;
+    
     display: flex;
     justify-content: center;
-    background-color: #eee;
-    padding: 25px; 
+    
+    background-color: #eee; 
     box-shadow: inset 1px 15px 17px -20px rgba(0,0,0,0.50);
 }
-/* space between icon and address */
-address i, footer i {
+
+address i, footer i {   /* for space between icon and address */
     position: relative;
     left: -20px;
 }
@@ -141,6 +144,7 @@ address i, footer i {
     gap: 10px;
     padding: 40px 0;
     background-color: rgb(250, 250, 250);
+    text-align: center;
 }
 .explore-wrapper h2, .method-wrapper h2, .restaurants-wrapper h2 {
     font-size: 35px;
@@ -157,12 +161,9 @@ address i, footer i {
     border: none;
     border-radius: 60px;
     
-    padding: 25px 40px;
+    padding: 15px 30px;
     margin: 20px;
-    
-    font-size: 22px;
-    font-weight: 400;
-    
+        
     color: white;
     background: rgb(156,0,236);
     background: linear-gradient(355deg, rgba(156,0,236,1) 0%, rgba(255,0,239,1) 100%);
@@ -173,11 +174,11 @@ address i, footer i {
 }
 .explore-wrapper:hover .explore-btn {
     opacity: 0.6;
-    box-shadow: 0 5px 10px 5px #adadad;
-
+    box-shadow: 0 0 10px 5px #adadad;
 }
+/* Explore Section End */
 
-/* How it Works SECTION */
+/* How-it-Works SECTION */
 
 .method-wrapper {
     margin: 50px auto;
@@ -187,14 +188,19 @@ address i, footer i {
     margin: auto;
     padding: 0 25px 50px 25px;
 }
+.three-btn-container a {
+    color: black;    
+}
+
 
     /* choose a restaurant button */
 .badge-btn-wrapper{    
     display: flex;
     justify-content: center;
     align-items: center;
-}
 
+    
+}
 .purple-badge{
     /* Center the content */
     align-items: center;
@@ -215,38 +221,32 @@ address i, footer i {
     position: relative;
     left: 35px;
 }
+.card-icons {
+    position: relative;
+    left: 63px;
+    font-size: 1em;
+}
+.badge-btn-wrapper:hover .card-icons {
+    color:rgb(164, 57, 245);
+}
 .how-it-button {
-    min-width: 350px;
+    min-width: 315px;
     max-width: 400px;
-    height: 110px;
+    /* height: 110px; */
 
-    padding: 35px 99px;
-    margin: 20px;
+    padding: 30px 0 30px 76px;
+    margin: 20px 0;
+    
+    text-align: start;
+    font-weight: 500;
 
     border: none;
     border-radius: 35px;
 
-    font-size: 16px;
-    font-weight: 600;
-
     box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
 }
-.how-it-button i {
-    position: relative;
-    left: -60px;
-    /* bottom: -20px; */
-    font-size: 25px;
-}
-.how-it-button span {
-    font-size: 20px;
-    /* prevent paragraph from wrapping */
-    /* white-space: nowrap;  */
-}
 .how-it-button:hover{
-    background-color: rgba(217, 167, 255, 0.224);;   
-}
-.how-it-button i:hover {
-    color: rgb(123, 52, 177);
+    box-shadow: 0 10px 25px 0 #adadad; 
 }
 
 
@@ -380,6 +380,12 @@ footer h3 {
 /* Tablet View Start */
 /* breakpoint 481px-768px on Tablet */
 @media (min-width: 481px) {
+    body {
+        background-color: lightseagreen;
+    }
+    .explore-btn {
+        font-size: 1.25em;
+    }
 
 }
 /* Desktop View Start */
@@ -396,7 +402,7 @@ footer h3 {
     .method-wrapper h2{
         padding-bottom: 10px;
     }
-    .how-it-button {
+    /* .how-it-button {
         min-width: 250px;
         max-width: 300px;
         padding: 35px 50px;
@@ -407,7 +413,7 @@ footer h3 {
     }
     .how-it-button span {
         font-size: 18px;
-    }
+    } */
     /* how it works section END */
 
     /* restaurant section only */
