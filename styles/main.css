@@ -162,6 +162,8 @@ address i, footer i {
 }
 .explore-wrapper:hover .explore-btn {
     opacity: 0.6;
+    box-shadow: 0 5px 10px 5px #adadad;
+
 }
 
 /* How it Works SECTION */
