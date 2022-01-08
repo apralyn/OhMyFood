@@ -182,7 +182,7 @@ address i, footer i {   /* for space between icon and address */
 
 .method-wrapper {
     margin: 50px auto;
-}
+}    
 
 .method-wrapper h2 {
     margin: auto;
@@ -197,6 +197,7 @@ address i, footer i {   /* for space between icon and address */
 .badge-btn-wrapper{    
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 .purple-badge{
     /* Center the content */
@@ -446,20 +447,6 @@ footer h3 {
     .purple-badge {
         left: 50px;
     }
-    /* .how-it-button {
-        min-width: 250px;
-        max-width: 300px;
-        padding: 35px 50px;
-    }
-    .how-it-button i {
-        left: -30px;
-        font-size: 20px;
-    }
-    .how-it-button span {
-        font-size: 18px;
-    } */
-    /* how it works section END */
-
     /* restaurant section only */
     .four-cards-container {
         display: flex;
