@@ -1,11 +1,25 @@
-/* for media query reference */
+/* for media query/breakpoints reference only */
+/* Mobile 320px */
 /* @media (min-width: 320px) and (max-width: 480px) {} */
-/* @media (min-width: 481px) and (max-width: 768px) {} */
-/* @media (min-width: 769px) and (max-width: 992px) {} */
-/* anything beyond 992px is fixed layout - margin is set to auto and centers everything. */
 /* Tablet 768px */
+/* @media (min-width: 481px) and (max-width: 768px) {} */
 /* Desktop 992px */
+/* @media (min-width: 769px) and (max-width: 992px) {} */
 
+/* Table of Contents */
+/*  Mobile View
+        1. Page Loader
+        2. Header
+        3. Main
+            3.1 Address
+            3.2 Explore Section
+            3.3 Method Section
+            3.4 Restaurant Section
+        4. Footer
+
+    Tablet View
+    Desktop View
+ */
 * {
     box-sizing: border-box;
     text-decoration: none;
@@ -23,7 +37,7 @@ html {
 /* Mobile View Start */
 /* breakpoint 0-320px/ 320-500px for Mobile */
 
-/* Page Loader Section */
+/* Page Loader */
 .loading, .site-wrapper {
     position: absolute;
 }
@@ -74,7 +88,7 @@ html {
       animation-iteration-count: infinite;
   }
 
-  @keyframes spin {
+@keyframes spin {
       0% {transform: rotate(0deg);}
       100% {transform: rotate(360deg);}
   }
@@ -96,6 +110,7 @@ html {
 }
 /* End of Page Loader */
 
+/* Header Section */
 /* Header/Location/Footer OK on M/T/D */
 header {
     width: 100%;
@@ -439,6 +454,7 @@ footer h3 {
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-wrap: wrap;
         gap: 25px;
     }
     .method-wrapper h2{
