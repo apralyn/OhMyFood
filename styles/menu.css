@@ -51,17 +51,24 @@ header img {
 main {
     display: flex;
     flex-direction: column;
-    margin: auto;
+    align-items: center;
+    justify-content: center
+    
 }
 .hero-image img{
-    margin: auto;
-    width: 300px;
+    width: 100vw;
+    height: 40vh;
+    object-fit:cover;
 }
 .full-menu-wrapper {
     position: relative;
     top: -50px;
     background-color: rgb(250, 250, 250);
     border-radius: 2em 2em 0 0;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 .menu-header {
     display: flex;
@@ -74,7 +81,7 @@ main {
 
 .heart-wrap {
     position: relative;
-    left: -30px;
+    left: 95px;
     top: -15px;
     font-size: 2em;
 
@@ -102,6 +109,13 @@ main {
     opacity: 0;
 }
 /* menu-header END */
+
+.entree-card-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 
 /* Menu Entrees */
 .menu-entrees {
@@ -240,7 +254,7 @@ main {
 footer {
     width: 100%;
     height: auto;
-    padding: 15px 0 15px 25px;
+    padding: 15px 0 15% 25px;
     background-color: rgb(57, 57, 57);
     color: white;
     display: flex;
@@ -266,5 +280,11 @@ footer h3 {
     .back-btn {  
         left: 30px;
         font-size: 2em;
+    }    
+}
+@media (min-width: 932px){
+    .full-menu-wrapper {
+        align-items: center;
+        justify-content: center;
     }
 }
