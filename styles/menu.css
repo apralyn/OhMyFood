@@ -1,3 +1,9 @@
+/* Color Reference
+ Primary (purple) - #9356DC
+ Secondary (pink)- #FF79DA
+ Tertiary (aqua) - #99E2D0
+ */
+
 * {
     box-sizing: border-box;
     text-decoration: none;
@@ -5,6 +11,7 @@
 body{
     margin: 0 auto;
     font-family: 'Roboto', sans-serif;
+    
 }
 html {
     line-height: 1.15;
@@ -15,8 +22,6 @@ html {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    border: 1px solid black;
-
 }
 header {
     width: 100%;
@@ -25,37 +30,38 @@ header {
     padding-top: 15px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center;   
 }
  .back-btn {
     position: relative;
-    left: 25px;
+    left: 10px;
     background-color: transparent;
     border: none;
-    font-size: 30px;
+    font-size: 1.5em;
 }
 header a {
     color: black;
 }
-
 header img {
-    min-width: 100px;
-    max-width: 250px;
+    width: 250px;
     margin: 0 auto;
 }
-/* main section */
 
+/* main section */
+main {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
 .hero-image img{
-   width: 485px;
-   position: relative;
+    margin: auto;
+    width: 300px;
 }
 .full-menu-wrapper {
     position: relative;
-    top: -70px;
+    top: -50px;
     background-color: rgb(250, 250, 250);
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
-    padding-bottom: 25px;
+    border-radius: 2em 2em 0 0;
 }
 .menu-header {
     display: flex;
@@ -66,14 +72,11 @@ header img {
     font-family: 'Shrikhand', cursive;
 }
 
-.menu-entrees, .menu-main-dish, .menu-desserts {
-    margin: auto 25px;
-}
 .heart-wrap {
     position: relative;
-    left: -50px;
+    left: -30px;
     top: -15px;
-    font-size: 30px;
+    font-size: 2em;
 
 }
 .heart-wrap .far {
@@ -83,7 +86,7 @@ header img {
 .heart-wrap .fas {
     position: absolute;
      /* gradient heart */
-    background: -webkit-gradient(linear, left top, left bottom, from(purple), to(pink));
+    background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     /* hover effect */
@@ -98,44 +101,45 @@ header img {
 .heart-wrap:hover .far{
     opacity: 0;
 }
-.menu-price {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+/* menu-header END */
+
+/* Menu Entrees */
+.menu-entrees {
+    padding: 10px;
 }
-.price {
-    padding-right: 10px;
+.menu-entrees span {
+    font-weight: 300;
+    font-size: .9em;
 }
 .green-line {
     width: 40px;
     height: 2px;
-    background-color: aqua;
-    margin-bottom: 15px;
+    background-color: #99E2D0;
+    margin-top: 5px;
+    margin-bottom: 45px;
+    
 }
 .menu-items-container {
-    margin-top: 40px;
-    /* fr codepen transfer */
-    /* width: 500px;
-        height: 400px;
-        margin: 50px; */
+    margin: 15px 0;
 }
 .menu-item {
     display: flex;
     flex-direction: column;
-    margin: 15px;
     z-index: 99;
-    
-    position: relative;
-    /* fr codepen transfer */
-    /* animation first try */
 
+    margin: 10px 0;
+  
+    position: relative;
+    width: 290px;
+    
+    /* menu appearing animation */
     animation: menuItems;
-    animation-duration: 850ms;
+    animation-duration: 650ms;
     animation-iteration-count: 1;
-    animation-timing-function: ease-in;
+    animation-timing-function: linear;
     animation-fill-mode: forwards;
 
-    /* for ticker transition */
+    /* menu appearing transition */
     transition-duration: 300ms;
     transition-property: width;
 }
@@ -145,10 +149,10 @@ header img {
     animation-direction: normal;
 }
 .item-two {
-    animation-delay: 2s;
+    animation-delay: 1s;
 }
 .item-three {
-    animation-delay: 3s;
+    animation-delay: 2s;
 }
 
 @keyframes menuItems {
@@ -173,23 +177,38 @@ header img {
 }
 
 .menu-dish {
-    background-color: white;
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    padding: 10px;
-    box-shadow: 5px 5px 69px 2px #dadada;
-    
+    border-radius: 20px;
+    padding: 15px 10px;
+    background-color: #fff;
+    box-shadow: 5px 5px 69px 2px #dadada;  
 }
-.menu-item:hover .menu-dish {
-    width: 85%;   
-}
-.menu-price {
-    padding-top: 10px;
-}
-.menu-price span {
+.menu-dish span {
+    font-size: 1.1em;
     white-space: nowrap;
     overflow: hidden;
+    text-overflow: ellipsis;
+}
+.menu-dish:hover span {    
+    padding-right: 25px;
+}
+
+.menu-item:hover .menu-dish {
+    width: 80%;
+    border-top-right-radius: 0; 
+    border-bottom-right-radius: 0;   
+}
+.menu-price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 5px;
+}
+.menu-price span {
+    font-weight: 300;
+    font-size: .9em;
+}
+.price {
+    font-size: .9em;
 }
 .menu-ticker {
     background-color: #99E2D0;
@@ -199,27 +218,23 @@ header img {
     top: 0;
     left: 0;
     z-index: -1;
-    border-radius: 10px;
+    border-radius: 20px;
     
 }
 .fa-check-circle {
-    font-size: 30px;
+    font-size: 1.4em;
     color: white;
     position: absolute;
-    left: 380px;
-    top: 17px;
+    left: 270px;
+    top: 25px;
     opacity: 0;
     
+    /* Ticker Rotate Effect */
     transition: transform 500ms linear;
 }
 .menu-item:hover .fa-check-circle{
     transform: translate(-20px)rotate(1turn);
     opacity: 1;
-}
-
-footer i {
-    position: relative;
-    left: -20px;
 }
 
 footer {
@@ -231,31 +246,25 @@ footer {
     display: flex;
     flex-direction: column;
 }
+footer a {
+    color: white;
+}
 footer h3 {
     margin: 10px 0;
     font-size: 20px;
     font-family: 'Shrikhand', cursive;
 }
-footer a {
-    color: white;
+.footer-link-wrap {
+    display: flex;
+    margin: 10px;
 }
-
-.ft-links ul {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
+.footer-links, .footer-icons {
+    display: flex;
+    flex-direction: column;
 }
-
-.ft-links ul li{
-    list-style: none;
-
-}
-@media (min-width:768px) {
-    .site-wrapper {
-        margin: auto;
-    }
-    .full-menu-wrapper {
-        display: flex;
-        flex-wrap: wrap;
+@media (min-width: 481px){
+    .back-btn {  
+        left: 30px;
+        font-size: 2em;
     }
 }
